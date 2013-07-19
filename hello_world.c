@@ -26,7 +26,7 @@ int main(void)
 
 	mr->mr[0] = L4_VCON_WRITE_OP;
 	mr->mr[1] = str_length;
-	memcpy(&mr->mr[2], "Hello, world!\n", str_length);
+	memcpy(&mr->mr[2], str, str_length);
 
 	l4_msgtag_t tag, ret;
 
